@@ -11,7 +11,6 @@ import doctor from './component/pages/doctor';
 import about from './component/pages/about';
 import contact from './component/pages/contact';
 import cleaning from './component/pages/cleaning';
-
 import Hospital from "./component/pages/Hospital";
 
 
