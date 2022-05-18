@@ -7,9 +7,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import axios from "axios";
-// import { Button } from "@progress/kendo-react-buttons";
 import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
-import { useRef } from "react";
 import { padding } from "@mui/system";
 import Button from "@mui/material/Button";
 
@@ -58,9 +56,9 @@ export default function C_Report() {
               className="column"
               style={{ float: "left", width: "50%", textAlign: "right" }}
             >
-              <span>info@Healistry.com</span>
+              <span>info@Health.com</span>
               <br />
-              <span style={{ color: "#4ad7d1" }}>WWW.Healistry.com</span>
+              <span style={{ color: "#4ad7d1" }}>WWW.Health.com</span>
               <br />
               <span>011 1111 543</span>
             </div>
@@ -72,7 +70,7 @@ export default function C_Report() {
                   Annual Report
                 </span>
                 <br />
-                Healistry Cleaning Company Report
+                 Cleaning Company Report
               </span>
             </div>
             <div style={{ textAlign: "center" }}>
