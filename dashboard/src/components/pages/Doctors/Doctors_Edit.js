@@ -36,10 +36,10 @@ const Doctors_add = (props, errors) => {
   const [cposistion, setCposistion] = useState("");
   const [whospital, setWhospital] = useState("");
   const [whistory, setWhistory] = useState("");
-  const [image, setImage] = useState("");
+  // const [image, setImage] = useState("");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [postImage, setPostImage] = useState({ myFile: "" });
+  // const [postImage, setPostImage] = useState({ myFile: "" });
 
   let [errors_dname, seterrors_dname] = useState("");
   let [errors_slnc, seterrors_slnc] = useState("");
@@ -78,7 +78,7 @@ const Doctors_add = (props, errors) => {
       setCposistion(response.data.CPosistion);
       setWhospital(response.data.WHospital);
       setWhistory(response.data.WHistory);
-      setPostImage(response.data.selectedFile);
+      // setPostImage(response.data.selectedFile);
       setDoctors(response.data);
     });
   }, []);
@@ -145,7 +145,7 @@ const Doctors_add = (props, errors) => {
           CPosistion: cposistion,
           WHospital: whospital,
           WHistory: whistory,
-          selectedFile: postImage,
+          // selectedFile: postImage,
         })
         .then(() => {
           setLoading(false);
@@ -436,75 +436,7 @@ const Doctors_add = (props, errors) => {
                       </li>
                     </ul>
                   </li>
-                  <li>
-                    <a href="#">
-                      <i className="metismenu-icon pe-7s-diamond" />
-                      Camping Details
-                      <i className="metismenu-state-icon pe-7s-angle-down caret-left" />
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/Camping_Add">
-                          <i className="metismenu-icon" />
-                          Camping | Add
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/Camping_update">
-                          <i className="metismenu-icon"></i> Camping |
-                          Edit,Delete
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="metismenu-icon pe-7s-diamond" />
-                      Blood Bank Details
-                      <i className="metismenu-state-icon pe-7s-angle-down caret-left" />
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/Blood_bank_add">
-                          <i className="metismenu-icon" />
-                          Blood Bank | Add
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/blood_bank_update">
-                          <i className="metismenu-icon"></i> Blood Bank |
-                          Edit,Delete
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="metismenu-icon pe-7s-diamond" />
-                      Laboratory Details
-                      <i className="metismenu-state-icon pe-7s-angle-down caret-left" />
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/Lab_Details_Add">
-                          <i className="metismenu-icon" />
-                          Laboratory detail | Add
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/Lab_Details_Update">
-                          <i className="metismenu-icon"></i> Laboratory detail |
-                          Edit,Delete
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="metismenu-icon pe-7s-display2" />
-                      Tables
-                    </a>
-                  </li>
+          
                 </ul>
               </div>
             </div>
@@ -651,19 +583,7 @@ const Doctors_add = (props, errors) => {
                         />
                       </Col>
                     </Form.Group>
-                    <Form.Group as={Row} className="mb-3" controlId="">
-                      <Form.Label column sm={3}>
-                        Image
-                      </Form.Label>
-                      <Col sm={9}>
-                        <img
-                          src={doctors.selectedFile}
-                          alt="image"
-                          height="350px"
-                          width="200px"
-                        />
-                      </Col>
-                    </Form.Group>
+              
                     <center>
                       <div className="button">
                         <input

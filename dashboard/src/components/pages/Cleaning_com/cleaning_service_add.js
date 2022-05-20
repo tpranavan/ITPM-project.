@@ -30,11 +30,11 @@ function Cleaning_service_add() {
   const [noe, setNoe] = useState("");
   const [cnumber, setCnumber] = useState("");
   const [since, setSince] = useState("");
-  const [image, setImage] = useState("");
+  // const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [postImage, setPostImage] = useState({ myFile: "" });
+  // const [postImage, setPostImage] = useState({ myFile: "" });
 
   let [errors_dname, seterrors_dname] = useState("");
   let [errors_location, seterrors_location] = useState("");
@@ -101,7 +101,7 @@ function Cleaning_service_add() {
           NOE: noe,
           CNumber: cnumber,
           Since: since,
-          Image: postImage.myFile,
+          // Image: postImage.myFile,
           Description: description,
         })
         .then((response) => {
@@ -137,7 +137,7 @@ function Cleaning_service_add() {
     const file = e.target.files[0];
     const base64 = await convertToBase64(file);
     // setPostImage({ ...postImage, myFile: base64 });
-    setPostImage({ myFile: base64 });
+    // setPostImage({ myFile: base64 });
     console.log(base64);
   };
 
@@ -512,11 +512,11 @@ function Cleaning_service_add() {
                           onChange={(e) => setCnumber(e.target.value)}
                           placeholder="Contact Number"
                         />
-                        {/* {errors_cnumber && (
+                        {errors_cnumber && (
                           <span style={{ color: "red" }} className="errors">
                             {errors_cnumber}
                           </span>
-                        )} */}
+                        )}
                       </Col>
                     </Form.Group>
                     <Form.Group as={Row} className="mb-3" controlId="">
@@ -556,10 +556,10 @@ function Cleaning_service_add() {
                       </Col>
                     </Form.Group>
                     <Form.Group as={Row} className="mb-3" controlId="">
-                      <Form.Label column sm={3}>
+                      {/* <Form.Label column sm={3}>
                         Image
-                      </Form.Label>
-                      <Col sm={9}>
+                      </Form.Label> */}
+                      {/* <Col sm={9}>
                         <Form.Control
                           type="file"
                           label="Image"
@@ -567,7 +567,7 @@ function Cleaning_service_add() {
                           accept=".jpeg, .png, .jpg"
                           onChange={(e) => handleFileUpload(e)}
                         />
-                      </Col>
+                      </Col> */}
                     </Form.Group>
                     <center>
                       <div className="button">

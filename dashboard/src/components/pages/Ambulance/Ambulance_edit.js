@@ -17,8 +17,8 @@ function Ambulance_edit() {
   const [contact, setContact] = useState("");
   const [dutyhours, setDutyhours] = useState("");
   const [hospitals, setHospitals] = useState("");
-  const [image, setImage] = useState("");
-  const [postImage, setPostImage] = useState({ myFile: "" });
+  // const [image, setImage] = useState("");
+  // const [postImage, setPostImage] = useState({ myFile: "" });
   
   const [location, setLocation] = useState("");
   const [error, setError] = useState(null);
@@ -113,7 +113,6 @@ function Ambulance_edit() {
     //     NOE: noe,
     //     CNumber: cnumber,
     //     Since: since,
-    //     Image: postImage.myFile,
     //     Description: description,
     //   });
       axios
@@ -125,7 +124,7 @@ function Ambulance_edit() {
           dutyhours: dutyhours,
           location: location,
           hospitals: hospitals,
-          image:image
+  
         })
         .then((response) => {
           setLoading(false);
@@ -162,7 +161,7 @@ function Ambulance_edit() {
     const file = e.target.files[0];
     const base64 = await convertToBase64(file);
     // setPostImage({ ...postImage, myFile: base64 });
-    setPostImage({ myFile: base64 });
+    // setPostImage({ myFile: base64 });
     // console.log(base64);
   };
 
@@ -610,7 +609,7 @@ function Ambulance_edit() {
                       </Col>
                     </Form.Group> */}
                     
-                    <Form.Group as={Row} className="mb-3" controlId="">
+                    {/* <Form.Group as={Row} className="mb-3" controlId="">
                       <Form.Label column sm={3}>
                         Image
                       </Form.Label>
@@ -623,7 +622,7 @@ function Ambulance_edit() {
                           onChange={(e) => handleFileUpload(e)}
                         />
                       </Col>
-                    </Form.Group>
+                    </Form.Group> */}
                     <center>
                       <div className="button">
                         <input

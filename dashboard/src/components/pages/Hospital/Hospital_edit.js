@@ -17,9 +17,9 @@ function Hospital_edit() {
   const [contact, setContact] = useState("");
   const [warddetails, setWarddetails] = useState("");
   const [staffcount, setStaffcount] = useState("");
-  const [image, setImage] = useState("");
  
-  const [postImage, setPostImage] = useState({ myFile: "" });
+ 
+
 
 
   const [error, setError] = useState(null);
@@ -27,11 +27,11 @@ function Hospital_edit() {
   const [hospital, setHospital] = useState([]);
  
 
-  // let [errors_dname, seterrors_dname] = useState("");
-  // let [errors_location, seterrors_location] = useState("");
-  // let [errors_noe, seterrors_noe] = useState("");
-  // let [errors_since, seterrors_since] = useState("");
-  // let [errors_description, seterrors_description] = useState("");
+  let [errors_name, seterrors_name] = useState("");
+  let [errors_location, seterrors_location] = useState("");
+  let [errors_contact, seterrors_contact] = useState("");
+  let [errors_warddetails, seterrors_warddetails] = useState("");
+  let [errors_staffcount, seterrors_staffcount] = useState("");
   // let [errors_cnumber, seterrors_cnumber] = useState("");
 
   const id = window.sessionStorage.getItem("HospitalID");
@@ -122,7 +122,7 @@ function Hospital_edit() {
           contact: contact,
           warddetails: warddetails,
           staffcount: staffcount,
-          image:image
+          // image:image
        
           
         })
@@ -161,7 +161,7 @@ function Hospital_edit() {
     const file = e.target.files[0];
     const base64 = await convertToBase64(file);
     // setPostImage({ ...postImage, myFile: base64 });
-    setPostImage({ myFile: base64 });
+  //  setPostImage({ myFile: base64 });
     // console.log(base64);
   };
 
@@ -437,179 +437,7 @@ function Hospital_edit() {
                       </li>
                     </ul>
                   </li>
-                  <li>
-                    <a href="#">
-                      <i className="metismenu-icon pe-7s-diamond" />
-                      Camping Details
-                      <i className="metismenu-state-icon pe-7s-angle-down caret-left" />
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/Camping_Add">
-                          <i className="metismenu-icon" />
-                          Camping | Add
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/Camping_update">
-                          <i className="metismenu-icon"></i> Camping |
-                          Edit,Delete
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="metismenu-icon pe-7s-diamond" />
-                      Blood Bank Details
-                      <i className="metismenu-state-icon pe-7s-angle-down caret-left" />
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/Blood_bank_add">
-                          <i className="metismenu-icon" />
-                          Blood Bank | Add
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/blood_bank_update">
-                          <i className="metismenu-icon"></i> Blood Bank |
-                          Edit,Delete
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="metismenu-icon pe-7s-diamond" />
-                      Laboratory Details
-                      <i className="metismenu-state-icon pe-7s-angle-down caret-left" />
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/Lab_Details_Add">
-                          <i className="metismenu-icon" />
-                          Laboratory detail | Add
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/Lab_Details_Update">
-                          <i className="metismenu-icon"></i> Laboratory detail |
-                          Edit,Delete
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="metismenu-icon pe-7s-diamond" />
-                      Facility Details
-                      <i className="metismenu-state-icon pe-7s-angle-down caret-left" />
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/facility/add">
-                          <i className="metismenu-icon" />
-                          Facility | Add
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/facility/update">
-                          <i className="metismenu-icon"></i> Facility detail |
-                          Edit,Delete
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="metismenu-icon pe-7s-diamond" />
-                      Technology Details
-                      <i className="metismenu-state-icon pe-7s-angle-down caret-left" />
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/technology/add">
-                          <i className="metismenu-icon" />
-                          Technology | Add
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/technology/update">
-                          <i className="metismenu-icon"></i> Technology detail |
-                          Edit,Delete
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="metismenu-icon pe-7s-diamond" />
-                      Pharmacy Details
-                      <i className="metismenu-state-icon pe-7s-angle-down caret-left" />
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/Pharmacyadd">
-                          <i className="metismenu-icon" />
-                          Pharmacy detail | Add
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/Pharmacy_update">
-                          <i className="metismenu-icon"></i> Pharmacy detail |
-                          Edit,Delete
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="metismenu-icon pe-7s-diamond" />
-                      Disease Details
-                      <i className="metismenu-state-icon pe-7s-angle-down caret-left" />
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/Disease_add">
-                          <i className="metismenu-icon" />
-                          Disease Details | Add
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/Lab_Details_Update">
-                          <i className="metismenu-icon"></i> Disease Details |
-                          Edit,Delete
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="metismenu-icon pe-7s-diamond" />
-                      Operation History Details
-                      <i className="metismenu-state-icon pe-7s-angle-down caret-left" />
-                    </a>
-                    <ul>
-                      <li>
-                        <a href="/Operationadd">
-                          <i className="metismenu-icon" />
-                          Operation | Add
-                        </a>
-                      </li>
-                      <li>
-                        <a href="/Operationupdate">
-                          <i className="metismenu-icon"></i> Operation | Update
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="metismenu-icon pe-7s-display2" />
-                      Tables
-                    </a>
-                  </li>
+          
                 </ul>
               </div>
             </div>
@@ -727,7 +555,7 @@ function Hospital_edit() {
                         )} */}
                       </Col>
                     </Form.Group>
-                    <Form.Group as={Row} className="mb-3" controlId="">
+                    {/* <Form.Group as={Row} className="mb-3" controlId="">
                       <Form.Label column sm={3}>
                         Image
                       </Form.Label>
@@ -738,13 +566,9 @@ function Hospital_edit() {
                           onChange={(e) => setImage(e.target.value)}
                           placeholder="Since Year"
                         />
-                        {/* {errors_since && (
-                          <span style={{ color: "red" }} className="errors">
-                            {errors_since}
-                          </span>
-                        )} */}
+                    
                       </Col>
-                    </Form.Group>
+                    </Form.Group> */}
 
                     <center>
                       <div className="button">

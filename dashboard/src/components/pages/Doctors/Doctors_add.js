@@ -35,10 +35,10 @@ const Doctors_add = (props, errors) => {
   const [cposistion, setCposistion] = useState("");
   const [whospital, setWhospital] = useState("");
   const [whistory, setWhistory] = useState("");
-  const [image, setImage] = useState("");
+  // const [image, setImage] = useState("");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [postImage, setPostImage] = useState({ myFile: "" });
+  // const [postImage, setPostImage] = useState({ myFile: "" });
 
   let [errors_dname, seterrors_dname] = useState("");
   let [errors_slnc, seterrors_slnc] = useState("");
@@ -120,7 +120,7 @@ const Doctors_add = (props, errors) => {
           CPosistion: cposistion,
           WHospital: whospital,
           WHistory: whistory,
-          selectedFile: postImage.myFile,
+          // selectedFile: postImage.myFile,
         })
         .then((response) => {
           setLoading(false);
@@ -154,7 +154,7 @@ const Doctors_add = (props, errors) => {
   const handleFileUpload = async (e) => {
     const file = e.target.files[0];
     const base64 = await convertToBase64(file);
-    setPostImage({ myFile: base64 });
+    // setPostImage({ myFile: base64 });
     console.log(base64);
   };
 
@@ -629,19 +629,8 @@ const Doctors_add = (props, errors) => {
                       </Col>
                     </Form.Group>
                     <Form.Group as={Row} className="mb-3" controlId="">
-                      <Form.Label column sm={3}>
-                        Image
-                      </Form.Label>
-                      <Col sm={9}>
-                        <Form.Control
-                          type="file"
-                          label="Image"
-                          name="myFile"
-                          accept=".jpeg, .png, .jpg"
-                          onChange={(e) => handleFileUpload(e)}
-                        />
-                      </Col>
-                    </Form.Group>
+                     
+                    </Form.Group> 
                     <center>
                       <div className="button">
                         <input

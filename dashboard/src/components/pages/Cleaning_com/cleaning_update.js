@@ -428,10 +428,7 @@ function Cleaning_update() {
                             <th>Since </th>
                             <td> - {item.Since}</td>
                           </tr>
-                          <tr>
-                            <th>Image </th>
-                            <td> - {item.Image}</td>
-                          </tr>
+                         
                           <tr>
                             <th>Description </th>
                             <td> - {item.Description} </td>
@@ -474,13 +471,7 @@ function Cleaning_update() {
               <div className="app-footer">
                 <div className="app-footer__inner">
                   <div className="app-footer-left">
-                    {/* <ul className="nav">
-                      <li className="nav-item">
-                        <a href="javascript:void(0);" className="nav-link">
-                          Copyright 2019-2021 Healistry.io. All rights reserved
-                        </a>
-                      </li>
-                    </ul> */}
+                    
                   </div>
                   <div className="app-footer-right">
                     <ul className="nav">

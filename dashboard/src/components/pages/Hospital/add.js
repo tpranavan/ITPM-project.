@@ -91,7 +91,7 @@ if (!name.trim()) {
         contact:contact,
         warddetails:warddetails,
         staffcount:staffcount,
-        image:image,
+        // image:image,
     }).then(response=>{
         alert("successfully registered");
     }).catch(error=>{

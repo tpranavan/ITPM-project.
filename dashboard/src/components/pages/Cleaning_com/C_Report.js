@@ -23,22 +23,22 @@ export default function C_Report() {
     getRequest();
   }, [cleaning]);
 
-  const PDFExportComponent = useRef(null);
-  const pdfonclick = (e) => {
-    PDFExportComponent.current.save();
-  };
+  // const PDFExportComponent = useRef(null);
+  // const pdfonclick = (e) => {
+  //   PDFExportComponent.current.save();
+  // };
 
   return (
     <Paper sx={{ width: "100%", overflow: "hidden" }}>
       {/* <Button primary={true} onClick={pdfonclick}>Browse</Button> */}
       <Button
         variant="outlined"
-        onClick={pdfonclick}
+       // onClick={pdfonclick}
         style={{ padding: "5px 700px 5px 700px" }}
       >
         Export
       </Button>
-      <PDFExport ref={PDFExportComponent}>
+      {/* <PDFExport ref={PDFExportComponent}> */}
         <div>
           <div
             className="row"
@@ -49,19 +49,7 @@ export default function C_Report() {
               paddingBottom: "20px",
             }}
           >
-            <div className="column" style={{ float: "left", width: "50%" }}>
-              <img src="/images/logo.png" width="40%" />
-            </div>
-            <div
-              className="column"
-              style={{ float: "left", width: "50%", textAlign: "right" }}
-            >
-              <span>info@Health.com</span>
-              <br />
-              <span style={{ color: "#4ad7d1" }}>WWW.Health.com</span>
-              <br />
-              <span>011 1111 543</span>
-            </div>
+
           </div>
           <div style={{ textAlign: "center", background: "#b6b7b8" }}>
             <div style={{ paddingBottom: "100px" }}>
@@ -74,9 +62,7 @@ export default function C_Report() {
               </span>
             </div>
             <div style={{ textAlign: "center" }}>
-              <center>
-                <img src="/images/report.png" width="50%" />
-              </center>
+             
             </div>
           </div>
         </div>
@@ -124,7 +110,7 @@ export default function C_Report() {
             </TableBody>
           </Table>
         </TableContainer>
-      </PDFExport>
+      {/* </PDFExport> */}
     </Paper>
   );
 }
