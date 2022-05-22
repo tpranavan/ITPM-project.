@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
 
 //Connect to DB
 mongoose.connect(
-  // "mongodb+srv://Admin:Theeban2021@cluster0.ig2tw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+ 
   "mongodb+srv://akash:Akiakash1@cluster0.roomq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
