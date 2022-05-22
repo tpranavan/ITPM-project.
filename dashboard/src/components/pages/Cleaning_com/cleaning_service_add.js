@@ -78,10 +78,7 @@ function Cleaning_service_add() {
       errors.cnumber = "Please Enter a Valid Contact Number";
       seterrors_cnumber(errors.cnumber);
     }
-    if (cnumber.length < 10) {
-      errors.cnumber = "Please Enter a Valid Contact Number";
-      seterrors_cnumber(errors.cnumber);
-    }
+  
 
     if (
       name === "" ||
@@ -512,11 +509,11 @@ function Cleaning_service_add() {
                           onChange={(e) => setCnumber(e.target.value)}
                           placeholder="Contact Number"
                         />
-                        {/* {errors_cnumber && (
+                        {errors_cnumber && (
                           <span style={{ color: "red" }} className="errors">
                             {errors_cnumber}
                           </span>
-                        )} */}
+                        )}
                       </Col>
                     </Form.Group>
                     <Form.Group as={Row} className="mb-3" controlId="">
