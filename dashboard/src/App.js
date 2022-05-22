@@ -19,12 +19,15 @@ import Ambulance_edit from "./components/pages/Ambulance/Ambulance_edit";
 import Hospital_edit from "./components/pages/Hospital/Hospital_edit";
 import AReport from "./components/pages/Ambulance/Report";
 import HReport from "./components/pages/Hospital/Report";
+import SignInSide from "./audh/SignInSide";
 
 // All routing routes ddefined here
 const Routing = () => {
   return (
     <Switch>
-      <Route exact path="/" component={Dashbord} />
+      <Route exact path="/" component={SignInSide} />
+      <Route exact path="/Dashboard" component={Dashbord} />
+      
       <Route exact path="/Doctors_update" component={Doctors_update} />
       <Route exact path="/Doctors_add/" component={Doctors_add} />
       <Route exact path="/Ambulance_Add" component={Ambulance_add} />

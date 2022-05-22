@@ -512,11 +512,11 @@ function Cleaning_service_add() {
                           onChange={(e) => setCnumber(e.target.value)}
                           placeholder="Contact Number"
                         />
-                        {errors_cnumber && (
+                        {/* {errors_cnumber && (
                           <span style={{ color: "red" }} className="errors">
                             {errors_cnumber}
                           </span>
-                        )}
+                        )} */}
                       </Col>
                     </Form.Group>
                     <Form.Group as={Row} className="mb-3" controlId="">

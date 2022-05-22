@@ -10,9 +10,11 @@ import axios from "axios";
 import { PDFExport, savePDF } from "@progress/kendo-react-pdf";
 import { padding } from "@mui/system";
 import Button from "@mui/material/Button";
+import { useRef } from "react";
 
 export default function C_Report() {
   const [cleaning, setCleaning] = useState([]);
+
   const getRequest = () => {
     axios.get("http://localhost:4000/cleaning").then((response) => {
       setCleaning(response.data);
@@ -23,22 +25,22 @@ export default function C_Report() {
     getRequest();
   }, [cleaning]);
 
-  // const PDFExportComponent = useRef(null);
-  // const pdfonclick = (e) => {
-  //   PDFExportComponent.current.save();
-  // };
+  const PDFExportComponent = useRef(null);
+  const pdfonclick = (e) => {
+    PDFExportComponent.current.save();
+  };
 
   return (
     <Paper sx={{ width: "100%", overflow: "hidden" }}>
-      {/* <Button primary={true} onClick={pdfonclick}>Browse</Button> */}
+      <Button primary={true} onClick={pdfonclick}>Browse</Button>
       <Button
         variant="outlined"
-       // onClick={pdfonclick}
+       onClick={pdfonclick}
         style={{ padding: "5px 700px 5px 700px" }}
       >
         Export
       </Button>
-      {/* <PDFExport ref={PDFExportComponent}> */}
+      <PDFExport ref={PDFExportComponent}>
         <div>
           <div
             className="row"
@@ -110,7 +112,7 @@ export default function C_Report() {
             </TableBody>
           </Table>
         </TableContainer>
-      {/* </PDFExport> */}
+      </PDFExport>
     </Paper>
   );
 }

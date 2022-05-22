@@ -18,11 +18,13 @@ const doctorsRoute = require("./routes/doctors");
 const cleaningRoute = require("./routes/cleaning");
 const ambulanceRoute = require("./routes/ambulance");
 const hospitalRoute = require("./routes/hospital");
+const UserManagementRoute = require("./routes/UserManagement");
 
 app.use("/doctors", doctorsRoute);
 app.use("/cleaning", cleaningRoute);
 app.use("/ambulance",ambulanceRoute);
 app.use("/hospital",hospitalRoute);
+app.use("/UserManagement",UserManagementRoute);
 
 
 app.get("/", (req, res) => {
